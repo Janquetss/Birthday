@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>is it my bday</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: gray;
+            background-image: radial-gradient(rgb(162, 208, 232), rgb(135, 171, 255), rgb(0, 68, 255));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            height: 80vh;
+            display: flex;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+    </div>
+</body>
+<script>
+    let date = new Date();
+    let h1 = document.querySelector("h1");
+    let msg;
+    (date.getDate() === 1 && date.getMonth() === 8) ? msg = "Happy birthday!" : msg = "It is unfortunately not your birthday yet.";
+    h1.innerHTML = msg;
+</script>
+</html>
